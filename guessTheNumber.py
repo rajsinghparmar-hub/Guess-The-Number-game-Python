@@ -1,9 +1,11 @@
 import random as ran
-
 target = ran.randint(1, 100)
 
 while True:
-    usrChoice = int(input("Guess the target: "))
+    usrChoice = input("Guess the target or quit(Q): ")
+    if usrChoice == "Q":
+        break
+    usrChoice = int(usrChoice)
     if usrChoice == target:
         print("Success: correct guess")
         break
